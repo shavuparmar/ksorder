@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { api } from "../api/auth";
+import { api } from "../api/client";
 
 function toInputDateValue(date) {
   // returns YYYY-MM-DD in local timezone
