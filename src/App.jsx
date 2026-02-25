@@ -4,7 +4,7 @@ import "./index.css";
 import ProtectedRoute from "./Common/ProtectedRouted";
 
 // Lazy loaded pages
-const HomePage = lazy(() => import("./pages/HomePage"));
+const HomePages = lazy(() => import("./pages/HomePage"));
 const AboutPages = lazy(() => import("./pages/AboutPages"));
 const OrderPages = lazy(() => import("./pages/OrderPages"));
 const LoginPage = lazy(() => import("./pages/LoginPage"));
@@ -46,7 +46,7 @@ function App() {
             path="/"
             element={
               <ProtectedRoute allowRoles={["USER", "ADMIN", "STAFF"]}>
-                <HomePage />
+                <HomePages/>
               </ProtectedRoute>
             }
           />
