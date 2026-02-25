@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { lazy, Suspense,React } from "react";
 import "./index.css";
-import ProtectedRouted from "./Common/ProtectedRouted";
+import ProtectedRouted from "./common/ProtectedRouted";
 
 // Lazy loaded pages
 const HomePages = lazy(() => import("./pages/HomePage"));
