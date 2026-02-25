@@ -1,5 +1,5 @@
 import { api } from "./client";
-
+export { api };
 export const authAPI = {
   login: (payload) => api.post("/users/login", payload),
   me: () => api.get("/users/me"),
