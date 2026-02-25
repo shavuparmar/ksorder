@@ -18,7 +18,7 @@ const ViewOrderPage = lazy(() => import("./pages/ViewOrderPage"));
 const PaymentStatementPage = lazy(() => import("./pages/PaymentStatementPage"));
 const ProfilePage = lazy(() => import("./pages/ProfilePage")); 
 // STAFF
-const StaffLayout = lazy(() => import("./Staff/StaffLayout"));
+const StaffLayout = lazy(() => import("./staff/StaffLayout"));
 const StaffOrdersPage = lazy(() => import("./staff/pages/StaffOrdersPage"));
 const StaffPaymentsPage = lazy(() => import("./staff/pages/Staffpaymentpage"));
 const StafStock = lazy(()=>(import("./staff/pages/StaffStockIn")))
