@@ -14,9 +14,9 @@ const Disclaimer = lazy(() => import("./policy/Disclaimer"));
 const PrivacyPolicy = lazy(() => import("./policy/PrivacypolicyPage"));
 
 // USER extra pages
-const ViewOrderPage = lazy(() => import("./Pages/ViewOrderPage"));
-const PaymentStatementPage = lazy(() => import("./Pages/PaymentStatementPage"));
-const ProfilePage = lazy(() => import("./Pages/ProfilePage")); 
+const ViewOrderPage = lazy(() => import("./pages/ViewOrderPage"));
+const PaymentStatementPage = lazy(() => import("./pages/PaymentStatementPage"));
+const ProfilePage = lazy(() => import("./pages/ProfilePage")); 
 // STAFF
 const StaffLayout = lazy(() => import("./Staff/StaffLayout"));
 const StaffOrdersPage = lazy(() => import("./staff/pages/StaffOrdersPage"));
