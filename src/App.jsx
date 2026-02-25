@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { lazy, Suspense,React } from "react";
 import "./index.css";
-import ProtectedRoute from "./Common/ProtectedRouted";
+import ProtectedRouted from "./Common/ProtectedRouted";
 
 // Lazy loaded pages
 const HomePages = lazy(() => import("./pages/HomePage"));
@@ -53,9 +53,9 @@ function App() {
           <Route
             path="/profile"
             element={
-              <ProtectedRoute allowRoles={["USER", "STAFF"]}>
+              <ProtectedRouted allowRoles={["USER", "STAFF"]}>
                 <ProfilePage />
-              </ProtectedRoute>
+              </ProtectedRouted>
             }
           />
           <Route path="/login" element={<LoginPage />} />
@@ -73,17 +73,17 @@ function App() {
           <Route
             path="/view-order"
             element={
-              <ProtectedRoute allowRoles={["USER"]}>
+              <ProtectedRouted allowRoles={["USER"]}>
                 <ViewOrderPage />
-              </ProtectedRoute>
+              </ProtectedRouted>
             }
           />
           <Route
             path="/payments"
             element={
-              <ProtectedRoute allowRoles={["USER"]}>
+              <ProtectedRouted allowRoles={["USER"]}>
                 <PaymentStatementPage />
-              </ProtectedRoute>
+              </ProtectedRouted>
             }
           />
 
@@ -96,9 +96,9 @@ function App() {
           <Route
             path="/staff"
             element={
-              <ProtectedRoute allowRoles={["STAFF", "ADMIN"]}>
+              <ProtectedRouted allowRoles={["STAFF", "ADMIN"]}>
                 <StaffLayout />
-              </ProtectedRoute>
+              </ProtectedRouted>
             }
           >
             <Route index element={<StaffOrdersPage />} />
@@ -110,9 +110,9 @@ function App() {
           <Route
             path="/admin"
             element={
-              <ProtectedRoute allowRoles={["ADMIN"]}>
+              <ProtectedRouted allowRoles={["ADMIN"]}>
                 <AdminLayout />
-              </ProtectedRoute>
+              </ProtectedRouted>
             }
           >
             <Route index element={<AdminDashboard />} />
