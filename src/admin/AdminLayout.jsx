@@ -7,7 +7,7 @@ import { authAPI } from "../api/auth";
 export default function AdminLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [me, setMe] = useState(null);
-  const [loading, setLoading] = useState(true);
+
   const nav = useNavigate();
 
   useEffect(() => {
@@ -24,9 +24,7 @@ export default function AdminLayout() {
         setMe(user);
       } catch {
         nav("/login", { replace: true });
-      } finally {
-        setLoading(false);
-      }
+      } 
     })();
   }, [nav]);
 
@@ -38,13 +36,7 @@ export default function AdminLayout() {
     nav("/login", { replace: true });
   };
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center text-gray-600">
-        Loading Admin...
-      </div>
-    );
-  }
+  
 
   return (
     <div className="min-h-screen bg-gray-50 flex">
