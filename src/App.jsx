@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { lazy, Suspense,React } from "react";
 import "./index.css";
 import ProtectedRouted from "./common/ProtectedRouted";
+import Loader from "./common/Loader";
 
 // Lazy loaded pages
 const HomePages = lazy(() => import("./pages/HomePage"));
@@ -40,7 +41,7 @@ const AdminRequests = lazy(()=>import("./admin/AdminRequests"))
 function App() {
   return (
     <Router>
-      <Suspense fallback={<div className="p-10">Loading...</div>}>
+      <Suspense fallback={<Loader/>}>
         <Routes>
           <Route
             path="/"
